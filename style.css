@@ -11,8 +11,8 @@ img{display:block;max-width:100%}
 .brand{width:48px;display:block;flex:none}.brand img{width:100%;height:auto}
 .site-nav{display:flex;align-items:center;gap:68px}.site-nav a{font-size:12px;font-weight:500;transition:color .18s}.site-nav a:hover{color:var(--yellow)}
 .menu-toggle{display:none}
-.hero{height:390px;position:relative;overflow:hidden;display:flex;align-items:flex-start;padding:24px max(6.7%,calc((100% - var(--page))/2));isolation:isolate}
-.hero-character{position:absolute;z-index:-1;width:min(80vw,1150px);max-width:none;height:auto;right:-1.5%;top:0;pointer-events:none}
+.hero{height:clamp(390px,41vw,840px);position:relative;overflow:hidden;display:flex;align-items:flex-start;padding:24px max(6.7%,calc((100% - var(--page))/2));isolation:isolate}
+.hero-character{position:absolute;z-index:-1;width:100%;max-width:none;height:auto;left:50%;right:auto;top:0;transform:translateX(-50%);pointer-events:none}
 .hero-copy{position:relative;z-index:1;padding-top:0}
 .hero h1,.section-heading h2,.footer-message h2{font-family:var(--display);text-transform:uppercase;font-weight:700;letter-spacing:-.025em;margin:0;line-height:.83}
 .hero h1{font-size:clamp(90px,8.1vw,118px)}
