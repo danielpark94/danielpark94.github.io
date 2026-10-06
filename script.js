@@ -16,6 +16,26 @@ siteNav?.querySelectorAll('a').forEach((link) => {
   });
 });
 
+const mediaLightbox = document.querySelector('#media-lightbox');
+const lightboxImage = mediaLightbox?.querySelector('img');
+
+document.querySelectorAll('[data-lightbox]').forEach((button) => {
+  button.addEventListener('click', () => {
+    if (!mediaLightbox || !lightboxImage) return;
+    lightboxImage.src = button.dataset.lightbox;
+    lightboxImage.alt = button.querySelector('img')?.alt || 'Expanded project artwork';
+    mediaLightbox.showModal();
+  });
+});
+
+mediaLightbox?.querySelector('.lightbox-close')?.addEventListener('click', () => mediaLightbox.close());
+mediaLightbox?.addEventListener('click', (event) => {
+  if (event.target === mediaLightbox) mediaLightbox.close();
+});
+mediaLightbox?.addEventListener('close', () => {
+  if (lightboxImage) lightboxImage.removeAttribute('src');
+});
+
 const workViewButtons = document.querySelectorAll('[data-work-view]');
 
 workViewButtons.forEach((button) => {
