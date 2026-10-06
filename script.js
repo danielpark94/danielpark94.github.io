@@ -15,3 +15,21 @@ siteNav?.querySelectorAll('a').forEach((link) => {
     siteNav.classList.remove('is-open');
   });
 });
+
+const workViewButtons = document.querySelectorAll('[data-work-view]');
+
+workViewButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const view = button.dataset.workView;
+
+    workViewButtons.forEach((option) => {
+      const isActive = option === button;
+      option.classList.toggle('is-active', isActive);
+      option.setAttribute('aria-pressed', String(isActive));
+    });
+
+    document.querySelectorAll('.work-panel').forEach((panel) => {
+      panel.hidden = panel.id !== `by-${view}`;
+    });
+  });
+});
