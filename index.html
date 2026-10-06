@@ -1,63 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Daniel Park — Art Director & Graphic Designer</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: #ffad00;
-      color: #191919;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .hero {
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-content {
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(64px, 10vw, 150px);
-      line-height: 0.85;
-      font-weight: 900;
-    }
-
-    p {
-      margin-top: 25px;
-      font-size: 24px;
-      font-weight: 700;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1ea">
+  <meta name="description" content="Daniel Park — graphic designer and illustrator. Selected identity, packaging, illustration and digital work.">
+  <title>Daniel Park — Designer & Illustrator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Daniel Park home"><img src="assets/logo/daniel-park-logo.svg" alt="Daniel Park"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="availability" href="#contact"><span></span> Available for projects</a>
+  </header>
 
-  <main class="hero">
-    <div class="hero-content">
-      <h1>DANIEL<br>PARK</h1>
-      <p>ART DIRECTOR & GRAPHIC DESIGNER</p>
-    </div>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent designer <span>·</span> Ecuador</p>
+        <h1 id="hero-title">Ideas with<br><em>character.</em></h1>
+        <p class="hero-intro">I’m Daniel — a graphic designer and illustrator building bold identities, thoughtful packaging and digital experiences.</p>
+        <a class="text-link" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art"><span class="art-note">A little bit of<br>curiosity goes a long way.</span><img src="assets/hero/hero-character.png" alt="Daniel Park's illustrated character" fetchpriority="high"></div>
+      <div class="hero-index" aria-hidden="true">DP / 01</div>
+    </section>
+
+    <section class="work section-wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow">Selected projects · 2022—2025</p><h2 id="work-title">A few things<br><span>made with care.</span></h2></div><p class="section-aside">A mix of visual identities, illustration<br>and experiments across mediums.</p></div>
+      <div class="project-grid">
+        <a class="project-card project-wide" href="#contact" aria-label="Gambly project, details coming soon"><div class="project-image"><img src="assets/projects/gambly-home.png" alt="Gambly project preview" loading="lazy"><span class="project-arrow">↗</span></div><div class="project-meta"><h3>Gambly</h3><span>Brand identity · Digital</span></div></a>
+        <a class="project-card" href="#contact" aria-label="Illustration project, details coming soon"><div class="project-image"><img src="assets/projects/illustration-home.png" alt="Illustration project preview" loading="lazy"><span class="project-arrow">↗</span></div><div class="project-meta"><h3>Illustration</h3><span>Art direction · Illustration</span></div></a>
+        <a class="project-card" href="#contact" aria-label="Graphic Tees project, details coming soon"><div class="project-image"><img src="assets/projects/graphic-tees-home.png" alt="Graphic Tees project preview" loading="lazy"><span class="project-arrow">↗</span></div><div class="project-meta"><h3>Graphic Tees</h3><span>Apparel · Illustration</span></div></a>
+        <a class="project-card" href="#contact" aria-label="Packaging project, details coming soon"><div class="project-image"><img src="assets/projects/packaging-home.png" alt="Packaging project preview" loading="lazy"><span class="project-arrow">↗</span></div><div class="project-meta"><h3>Packaging</h3><span>Packaging · Branding</span></div></a>
+        <a class="project-card" href="#contact" aria-label="La Reforma project, details coming soon"><div class="project-image"><img src="assets/projects/la-reforma-home.png" alt="La Reforma project preview" loading="lazy"><span class="project-arrow">↗</span></div><div class="project-meta"><h3>La Reforma</h3><span>Brand identity · Hospitality</span></div></a>
+        <a class="project-card" href="#contact" aria-label="Chiveria project, details coming soon"><div class="project-image"><img src="assets/projects/chiveria-home.png" alt="Chiveria project preview" loading="lazy"><span class="project-arrow">↗</span></div><div class="project-meta"><h3>Chiveria</h3><span>Brand identity · Packaging</span></div></a>
+        <a class="project-card" href="#contact" aria-label="UI Design project, details coming soon"><div class="project-image"><img src="assets/projects/ui-design-home.png" alt="UI Design project preview" loading="lazy"><span class="project-arrow">↗</span></div><div class="project-meta"><h3>UI Design</h3><span>Digital · Product design</span></div></a>
+        <a class="project-card" href="#contact" aria-label="Waffles project, details coming soon"><div class="project-image"><img src="assets/projects/waffles-home.png" alt="Waffles project preview" loading="lazy"><span class="project-arrow">↗</span></div><div class="project-meta"><h3>Waffles</h3><span>Brand identity · Packaging</span></div></a>
+      </div>
+      <p class="work-footnote">More stories coming soon <span>✳</span></p>
+    </section>
+
+    <section class="about" id="about"><div class="about-inner section-wrap"><p class="eyebrow">A little about me</p><div class="about-copy"><h2>Good design should<br><em>make you feel something.</em></h2><p>I’m a multidisciplinary designer who loves bringing ideas to life with color, character and a little unexpected detail. From the first sketch to the final pixel, I make work that feels human and leaves a lasting impression.</p><a class="text-link" href="#contact">Let’s make something <span aria-hidden="true">↗</span></a></div><span class="about-doodle" aria-hidden="true">✳</span></div></section>
   </main>
 
+  <footer class="site-footer section-wrap" id="contact">
+    <p class="eyebrow">Have a good one in mind?</p><h2>Let’s talk<br><a href="mailto:hello@danielpark.design">about it.</a></h2>
+    <div class="footer-bottom"><a class="footer-email" href="mailto:hello@danielpark.design">hello@danielpark.design</a><div class="social-links" aria-label="Social links"><a href="https://www.instagram.com/" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a><a href="https://www.linkedin.com/" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt=""></a><a href="https://www.behance.net/" aria-label="Behance"><img src="assets/icons/behance.svg" alt=""></a><a href="mailto:hello@danielpark.design" aria-label="Email"><img src="assets/icons/mail.svg" alt=""></a></div><span class="copyright">© <span id="year"></span> Daniel Park</span><a class="back-top" href="#top">Back to top ↑</a></div>
+    <p class="footer-note">Made with curiosity <span>✳</span></p>
+  </footer>
 </body>
 </html>
