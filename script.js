@@ -21,6 +21,7 @@ const workViewButtons = document.querySelectorAll('[data-work-view]');
 workViewButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const view = button.dataset.workView;
+    const panelId = view === 'clients' ? 'by-client' : 'by-skill';
 
     workViewButtons.forEach((option) => {
       const isActive = option === button;
@@ -29,7 +30,7 @@ workViewButtons.forEach((button) => {
     });
 
     document.querySelectorAll('.work-panel').forEach((panel) => {
-      panel.hidden = panel.id !== `by-${view}`;
+      panel.hidden = panel.id !== panelId;
     });
   });
 });
