@@ -51,22 +51,22 @@
       <h2 id="motion-heading">Motion Graphics</h2>
       <p class="gallery-hint">Click or tap a thumbnail to play</p>
       <div class="case-video-grid">
-        <video controls playsinline preload="none" poster="assets/gambly/motion-graphics/motion-01-poster.png" aria-label="Gambly motion graphics video 1"><source src="assets/gambly/motion-graphics/motion-01.mp4" type="video/mp4"></video>
-        <video controls playsinline preload="none" poster="assets/gambly/motion-graphics/motion-02-poster.png" aria-label="Gambly motion graphics video 2"><source src="assets/gambly/motion-graphics/motion-02.mp4" type="video/mp4"></video>
-        <video controls playsinline preload="none" poster="assets/gambly/motion-graphics/motion-03-poster.png" aria-label="Gambly motion graphics video 3"><source src="assets/gambly/motion-graphics/motion-03.mp4" type="video/mp4"></video>
-        <video controls playsinline preload="none" poster="assets/gambly/motion-graphics/motion-04-poster.png" aria-label="Gambly motion graphics video 4"><source src="assets/gambly/motion-graphics/motion-04.mp4" type="video/mp4"></video>
-        <video controls playsinline preload="none" poster="assets/gambly/motion-graphics/motion-05-poster.png" aria-label="Gambly motion graphics video 5"><source src="assets/gambly/motion-graphics/motion-05.mp4" type="video/mp4"></video>
+        <button class="case-video" type="button" data-video="assets/gambly/motion-graphics/motion-01.mp4" aria-label="Play Gambly motion graphics video 1"><img src="assets/gambly/motion-graphics/motion-01-poster.png" alt="Gambly motion graphics video 1 thumbnail" loading="lazy"><span aria-hidden="true">▶</span></button>
+        <button class="case-video" type="button" data-video="assets/gambly/motion-graphics/motion-02.mp4" aria-label="Play Gambly motion graphics video 2"><img src="assets/gambly/motion-graphics/motion-02-poster.png" alt="Gambly motion graphics video 2 thumbnail" loading="lazy"><span aria-hidden="true">▶</span></button>
+        <button class="case-video" type="button" data-video="assets/gambly/motion-graphics/motion-03.mp4" aria-label="Play Gambly motion graphics video 3"><img src="assets/gambly/motion-graphics/motion-03-poster.png" alt="Gambly motion graphics video 3 thumbnail" loading="lazy"><span aria-hidden="true">▶</span></button>
+        <button class="case-video" type="button" data-video="assets/gambly/motion-graphics/motion-04.mp4" aria-label="Play Gambly motion graphics video 4"><img src="assets/gambly/motion-graphics/motion-04-poster.png" alt="Gambly motion graphics video 4 thumbnail" loading="lazy"><span aria-hidden="true">▶</span></button>
+        <button class="case-video" type="button" data-video="assets/gambly/motion-graphics/motion-05.mp4" aria-label="Play Gambly motion graphics video 5"><img src="assets/gambly/motion-graphics/motion-05-poster.png" alt="Gambly motion graphics video 5 thumbnail" loading="lazy"><span aria-hidden="true">▶</span></button>
       </div>
     </section>
 
     <section class="case-gallery case-wrap" aria-labelledby="ladder-heading">
       <p class="case-eyebrow">Secondary Accounts</p>
-      <h2 class="case-subheading" id="ladder-heading">Ladder Bros.</h2>
+      <h2 class="case-subheading case-secondary-heading" id="ladder-heading">Ladder Bros.</h2>
       <button class="case-image case-feature-image" type="button" data-lightbox="assets/gambly/ladder-bros/ladder-bros-01.png" aria-label="Expand Ladder Bros. artwork"><img src="assets/gambly/ladder-bros/ladder-bros-01.png" alt="Ladder Bros. secondary account artwork" loading="lazy"></button>
     </section>
 
     <section class="case-gallery case-wrap" aria-labelledby="parlay-heading">
-      <h2 id="parlay-heading">Parlay Pieces</h2>
+      <h2 class="case-secondary-heading" id="parlay-heading">Parlay Pieces</h2>
       <p class="gallery-hint">Click or tap a picture to expand</p>
       <div class="case-image-grid">
         <button class="case-image" type="button" data-lightbox="assets/gambly/parlay-pieces/parlay-01.png" aria-label="Expand Parlay piece 1"><img src="assets/gambly/parlay-pieces/parlay-01.png" alt="Parlay campaign artwork 1" loading="lazy"></button>
@@ -78,7 +78,7 @@
     </section>
 
     <section class="case-gallery case-wrap" aria-labelledby="jjs-heading">
-      <h2 id="jjs-heading">JJ’s Parlays <span>(AI Persona)</span></h2>
+      <h2 class="case-secondary-heading" id="jjs-heading">JJ’s Parlays <span>(AI Persona)</span></h2>
       <p class="gallery-hint">Click or tap a picture to expand</p>
       <div class="case-image-grid">
         <button class="case-image" type="button" data-lightbox="assets/gambly/jjs-parlays/jjs-01.png" aria-label="Expand JJ’s Parlays artwork 1"><img src="assets/gambly/jjs-parlays/jjs-01.png" alt="JJ’s Parlays AI persona campaign artwork 1" loading="lazy"></button>
@@ -91,7 +91,7 @@
     <div class="case-bottom-nav case-wrap"><a class="work-back" href="work.html#by-client"><span aria-hidden="true">◀</span> Go Back</a><a class="work-back" href="work.html#by-client">Next <span aria-hidden="true">▶</span></a></div>
   </main>
 
-  <dialog class="media-lightbox" id="media-lightbox" aria-label="Expanded project artwork"><button type="button" class="lightbox-close" aria-label="Close enlarged image">×</button><img src="" alt=""></dialog>
+  <dialog class="media-lightbox" id="media-lightbox" aria-label="Project media viewer"><button type="button" class="lightbox-close" aria-label="Close viewer">×</button><img src="" alt=""><video class="lightbox-video" controls playsinline preload="none" hidden></video><button type="button" class="lightbox-next" aria-label="Next image">Next <span aria-hidden="true">→</span></button></dialog>
 
   <footer class="site-footer" id="contact">
     <div class="footer-inner section-wrap">
