@@ -62,7 +62,10 @@ document.querySelectorAll('[data-video]').forEach((button) => {
     lightboxItems = [];
     lightboxVideo.hidden = false;
     lightboxVideo.src = button.dataset.video;
-    lightboxVideo.poster = button.querySelector('img')?.src || '';
+    lightboxVideo.loop = button.dataset.videoLoop === 'true';
+    const videoPoster = button.querySelector('img')?.src;
+    if (videoPoster) lightboxVideo.poster = videoPoster;
+    else lightboxVideo.removeAttribute('poster');
     mediaLightbox.showModal();
     lightboxVideo.load();
     lightboxVideo.play().catch(() => {});
@@ -104,6 +107,7 @@ mediaLightbox?.addEventListener('close', () => {
   lightboxItems = [];
   if (lightboxVideo) {
     lightboxVideo.pause();
+    lightboxVideo.loop = false;
     lightboxVideo.removeAttribute('src');
     lightboxVideo.removeAttribute('poster');
     lightboxVideo.load();

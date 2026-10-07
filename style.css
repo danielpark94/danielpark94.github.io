@@ -138,3 +138,23 @@ img{display:block;max-width:100%}
  .lightbox-prev{left:12px}.lightbox-next{right:12px}
 }
 @media(max-width:800px){.hero-role{font-size:clamp(17.1px,5.6vw,21.9px)}.hero-role-second-line{display:inline-block;margin-left:.22em}}
+
+/* La Reforma case study additions */
+.reforma-redesign{padding-top:30px}
+.reforma-feature{padding:12px 0 28px}
+.reforma-feature+ .reforma-feature{padding-top:28px;border-top:1px solid rgba(25,25,25,.35)}
+.reforma-feature h3{font-family:var(--display);font-size:clamp(22px,2.5vw,34px);font-weight:700;line-height:1;text-transform:uppercase;margin:0 0 10px}
+.reforma-feature p{max-width:900px;font-family:var(--body);font-size:15px;font-weight:400;line-height:1.45;margin:0 0 20px}
+.reforma-feature img{display:block;width:100%;height:auto;max-width:1920px;margin-inline:auto}
+.la-reforma-video-grid .case-video{aspect-ratio:16/9;background:#191919}
+.la-reforma-video-grid .case-video--symbol>span{width:54px;height:54px;font-size:20px}
+@media(max-width:800px){
+ .reforma-redesign{padding-top:20px}
+ .reforma-feature{padding:8px 0 20px}
+ .reforma-feature+.reforma-feature{padding-top:20px}
+ .reforma-feature h3{font-size:22px;margin-bottom:8px}
+ .reforma-feature p{font-size:12px;line-height:1.4;margin-bottom:14px}
+ .la-reforma-video-grid{grid-template-columns:1fr;gap:10px}
+ .la-reforma-video-grid .case-video{aspect-ratio:16/9}
+ .la-reforma-video-grid .case-video--symbol>span{width:42px;height:42px;font-size:16px}
+}
