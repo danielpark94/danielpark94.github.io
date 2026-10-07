@@ -98,6 +98,14 @@ img{display:block;max-width:100%}
 .case-video>span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:42px;height:42px;display:grid;place-items:center;padding-left:3px;border-radius:50%;background:var(--yellow);color:var(--black);font-size:16px;opacity:.94}
 .case-feature-image{width:min(86%,1000px);height:auto;aspect-ratio:auto;margin:0 auto}
 .case-feature-image img{height:auto;object-fit:contain}
+.chiveria-campaign{display:flex;flex-direction:column;gap:24px}
+.chiveria-campaign>h2{margin-bottom:0}
+.campaign-hero,.campaign-guide{width:100%;height:auto;object-fit:contain}
+.campaign-guide{max-width:1072px;margin-inline:auto}
+.campaign-video-block{display:grid;justify-items:center;gap:10px}
+.campaign-video{display:block;width:100%;height:auto;max-height:82vh;background:#191919;object-fit:contain}
+.campaign-sound-toggle{border:1px solid var(--black);border-radius:999px;background:var(--black);color:var(--white);padding:8px 15px;font:700 11px/1 var(--body);text-transform:uppercase;cursor:pointer}
+.campaign-sound-toggle:hover{background:#000}
 .case-bottom-nav{display:flex;justify-content:center;gap:16px;padding-top:34px}
 .case-bottom-nav .work-back{margin:0;font-size:18px}
 .media-lightbox{position:fixed;width:min(94vw,1400px);max-width:none;max-height:94vh;padding:44px 14px 58px;border:0;border-radius:6px;background:#191919;overflow:visible}
@@ -124,6 +132,7 @@ img{display:block;max-width:100%}
  .case-video>span{width:30px;height:30px;font-size:12px}
  .case-eyebrow{font-size:9px;margin-bottom:20px}.case-gallery>.case-subheading{font-size:18px;margin-bottom:9px}.case-gallery>h2.case-secondary-heading{font-size:18px;margin-bottom:9px}
  .case-feature-image{width:100%}.case-feature-image img{height:auto;aspect-ratio:auto}
+ .chiveria-campaign{gap:15px}.campaign-guide{width:100%}.campaign-video{max-height:none}
  .case-bottom-nav{gap:8px;padding-top:25px}.case-bottom-nav .work-back{font-size:14px;padding:4px 12px 4px 5px}.case-bottom-nav .work-back span{width:28px;height:28px}
  .lightbox-prev,.lightbox-next{bottom:12px;padding:8px 11px;font-size:10px}
  .lightbox-prev{left:12px}.lightbox-next{right:12px}

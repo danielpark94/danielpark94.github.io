@@ -69,6 +69,30 @@ document.querySelectorAll('[data-video]').forEach((button) => {
   });
 });
 
+const campaignVideo = document.querySelector('[data-scroll-autoplay]');
+const campaignSoundToggle = document.querySelector('.campaign-sound-toggle');
+
+if (campaignVideo && 'IntersectionObserver' in window) {
+  const campaignVideoObserver = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      campaignVideo.muted = true;
+      campaignVideo.play().catch(() => {});
+    } else {
+      campaignVideo.pause();
+    }
+  }, { threshold: 0.55 });
+  campaignVideoObserver.observe(campaignVideo);
+}
+
+campaignSoundToggle?.addEventListener('click', () => {
+  if (!campaignVideo) return;
+  campaignVideo.muted = !campaignVideo.muted;
+  const soundEnabled = !campaignVideo.muted;
+  campaignSoundToggle.setAttribute('aria-pressed', String(soundEnabled));
+  campaignSoundToggle.textContent = soundEnabled ? 'Mute sound' : 'Enable sound';
+  if (soundEnabled) campaignVideo.play().catch(() => {});
+});
+
 lightboxPrev?.addEventListener('click', () => showLightboxItem(lightboxIndex - 1));
 lightboxNext?.addEventListener('click', () => showLightboxItem(lightboxIndex + 1));
 mediaLightbox?.querySelector('.lightbox-close')?.addEventListener('click', () => mediaLightbox.close());
