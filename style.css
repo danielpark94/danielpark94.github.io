@@ -128,4 +128,4 @@ img{display:block;max-width:100%}
  .lightbox-prev,.lightbox-next{bottom:12px;padding:8px 11px;font-size:10px}
  .lightbox-prev{left:12px}.lightbox-next{right:12px}
 }
-@media(max-width:800px){.hero-role{font-size:clamp(17.1px,5.6vw,21.9px)}}
+@media(max-width:800px){.hero-role{font-size:clamp(17.1px,5.6vw,21.9px)}.hero-role-second-line{display:inline-block;margin-left:.22em}}
