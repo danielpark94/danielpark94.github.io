@@ -19,8 +19,9 @@ siteNav?.querySelectorAll('a').forEach((link) => {
 const mediaLightbox = document.querySelector('#media-lightbox');
 const lightboxImage = mediaLightbox?.querySelector('img');
 const lightboxVideo = mediaLightbox?.querySelector('.lightbox-video');
+const lightboxPrev = mediaLightbox?.querySelector('.lightbox-prev');
 const lightboxNext = mediaLightbox?.querySelector('.lightbox-next');
-const lightboxItems = [...document.querySelectorAll('[data-lightbox]')];
+let lightboxItems = [];
 let lightboxIndex = -1;
 
 const showLightboxItem = (index) => {
@@ -33,16 +34,20 @@ const showLightboxItem = (index) => {
     lightboxVideo.load();
   }
   lightboxImage.hidden = false;
-  if (lightboxNext) lightboxNext.hidden = false;
+  const hasMultipleImages = lightboxItems.length > 1;
+  if (lightboxPrev) lightboxPrev.hidden = !hasMultipleImages;
+  if (lightboxNext) lightboxNext.hidden = !hasMultipleImages;
   lightboxIndex = (index + lightboxItems.length) % lightboxItems.length;
   const item = lightboxItems[lightboxIndex];
   lightboxImage.src = item.dataset.lightbox;
   lightboxImage.alt = item.querySelector('img')?.alt || 'Expanded project artwork';
 };
 
-lightboxItems.forEach((button, index) => {
+document.querySelectorAll('[data-lightbox]').forEach((button) => {
   button.addEventListener('click', () => {
-    showLightboxItem(index);
+    const album = button.closest('.case-gallery');
+    lightboxItems = [...(album?.querySelectorAll('[data-lightbox]') || [button])];
+    showLightboxItem(lightboxItems.indexOf(button));
     if (!mediaLightbox) return;
     mediaLightbox.showModal();
   });
@@ -52,7 +57,9 @@ document.querySelectorAll('[data-video]').forEach((button) => {
   button.addEventListener('click', () => {
     if (!mediaLightbox || !lightboxVideo || !lightboxImage) return;
     lightboxImage.hidden = true;
+    lightboxPrev.hidden = true;
     lightboxNext.hidden = true;
+    lightboxItems = [];
     lightboxVideo.hidden = false;
     lightboxVideo.src = button.dataset.video;
     lightboxVideo.poster = button.querySelector('img')?.src || '';
@@ -62,6 +69,7 @@ document.querySelectorAll('[data-video]').forEach((button) => {
   });
 });
 
+lightboxPrev?.addEventListener('click', () => showLightboxItem(lightboxIndex - 1));
 lightboxNext?.addEventListener('click', () => showLightboxItem(lightboxIndex + 1));
 mediaLightbox?.querySelector('.lightbox-close')?.addEventListener('click', () => mediaLightbox.close());
 mediaLightbox?.addEventListener('click', (event) => {
@@ -69,6 +77,7 @@ mediaLightbox?.addEventListener('click', (event) => {
 });
 mediaLightbox?.addEventListener('close', () => {
   if (lightboxImage) lightboxImage.removeAttribute('src');
+  lightboxItems = [];
   if (lightboxVideo) {
     lightboxVideo.pause();
     lightboxVideo.removeAttribute('src');

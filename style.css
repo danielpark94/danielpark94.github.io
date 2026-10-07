@@ -104,10 +104,12 @@ img{display:block;max-width:100%}
 .media-lightbox::backdrop{background:rgba(0,0,0,.88)}
 .media-lightbox>img{display:block;max-width:100%;max-height:calc(94vh - 108px);width:auto;height:auto;margin:auto;object-fit:contain}
 .media-lightbox>[hidden]{display:none}
-.media-lightbox>.lightbox-video{display:block;width:100%;max-width:100%;max-height:calc(94vh - 108px);height:auto;margin:auto;background:#000;object-fit:contain}
+.media-lightbox>.lightbox-video:not([hidden]){display:block;width:100%;max-width:100%;max-height:calc(94vh - 108px);height:auto;margin:auto;background:#000;object-fit:contain}
 .lightbox-close{position:absolute;top:5px;right:8px;width:34px;height:34px;border:0;border-radius:50%;background:#ffad00;color:#191919;font-size:27px;line-height:1;cursor:pointer}
-.lightbox-next{position:absolute;right:16px;bottom:14px;border:0;border-radius:999px;background:#ffad00;color:#191919;padding:9px 14px;font:700 12px/1 var(--body);text-transform:uppercase;cursor:pointer}
-.lightbox-next span{font-size:17px;margin-left:5px}
+.lightbox-prev,.lightbox-next{position:absolute;bottom:14px;border:0;border-radius:999px;background:#ffad00;color:#191919;padding:9px 14px;font:700 12px/1 var(--body);text-transform:uppercase;cursor:pointer}
+.lightbox-prev{left:16px}.lightbox-next{right:16px}
+.lightbox-prev span,.lightbox-next span{font-size:17px;margin:0 5px}
+.media-lightbox>.lightbox-prev[hidden],.media-lightbox>.lightbox-next[hidden]{display:none}
 @media(max-width:800px){
  .case-main{padding-bottom:32px}.case-wrap{width:calc(100% - 32px)}
  .case-toolbar{padding:11px 0 2px;font-size:9px}.case-title{font-size:clamp(30px,9vw,44px);margin:4px 0 10px}
@@ -123,6 +125,7 @@ img{display:block;max-width:100%}
  .case-eyebrow{font-size:9px;margin-bottom:20px}.case-gallery>.case-subheading{font-size:18px;margin-bottom:9px}.case-gallery>h2.case-secondary-heading{font-size:18px;margin-bottom:9px}
  .case-feature-image{width:100%}.case-feature-image img{height:auto;aspect-ratio:auto}
  .case-bottom-nav{gap:8px;padding-top:25px}.case-bottom-nav .work-back{font-size:14px;padding:4px 12px 4px 5px}.case-bottom-nav .work-back span{width:28px;height:28px}
- .lightbox-next{right:12px;bottom:12px;padding:8px 11px;font-size:10px}
+ .lightbox-prev,.lightbox-next{bottom:12px;padding:8px 11px;font-size:10px}
+ .lightbox-prev{left:12px}.lightbox-next{right:12px}
 }
 @media(max-width:800px){.hero-role{font-size:clamp(17.1px,5.6vw,21.9px)}}
