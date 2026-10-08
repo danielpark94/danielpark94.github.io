@@ -132,3 +132,43 @@ workViewButtons.forEach((button) => {
     });
   });
 });
+
+
+// Keep long image sections compact until the visitor asks to see the rest.
+document.querySelectorAll('.case-gallery .case-image-grid').forEach((grid) => {
+  const images = [...grid.querySelectorAll('[data-lightbox]')];
+  if (images.length <= 9) return;
+  images.slice(9).forEach((image) => {
+    image.classList.add('is-collapsed-image');
+    image.hidden = true;
+  });
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'gallery-more-button';
+  toggle.textContent = 'View more';
+  toggle.setAttribute('aria-expanded', 'false');
+  grid.insertAdjacentElement('afterend', toggle);
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    images.slice(9).forEach((image) => { image.hidden = expanded; });
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    toggle.textContent = expanded ? 'View more' : 'Show less';
+  });
+});
+
+// Let mobile visitors move through the current image album with a horizontal swipe.
+let lightboxTouchStart = null;
+lightboxImage?.addEventListener('touchstart', (event) => {
+  if (event.touches.length !== 1) return;
+  const touch = event.touches[0];
+  lightboxTouchStart = { x: touch.clientX, y: touch.clientY };
+}, { passive: true });
+lightboxImage?.addEventListener('touchend', (event) => {
+  if (!lightboxTouchStart || !window.matchMedia('(max-width: 800px)').matches) return;
+  const touch = event.changedTouches[0];
+  const dx = touch.clientX - lightboxTouchStart.x;
+  const dy = touch.clientY - lightboxTouchStart.y;
+  lightboxTouchStart = null;
+  if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy)) return;
+  showLightboxItem(lightboxIndex + (dx < 0 ? 1 : -1));
+}, { passive: true });

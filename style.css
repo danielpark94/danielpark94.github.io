@@ -162,3 +162,18 @@ img{display:block;max-width:100%}
  .la-reforma-video-grid .case-video--symbol>span{width:42px;height:42px;font-size:16px}
 }
 
+
+
+.gallery-more-button{display:block;margin:18px auto 0;border:0;border-radius:999px;background:var(--black);color:var(--white);padding:10px 20px;font:700 12px/1 var(--body);text-transform:uppercase;cursor:pointer}
+.gallery-more-button:hover{background:#000}
+.gallery-more-button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.gallery-more-button[hidden],.case-image[hidden]{display:none}
+.hero-role-mobile-amp{display:none}
+@media(max-width:800px){
+ .hero-role{white-space:normal;width:100%;margin:0 0 18px}
+ .hero-role br{display:block}
+ .hero-role-amp{display:none}
+ .hero-role-mobile-amp{display:inline}
+ .hero-role-second-line{display:inline-block;margin-left:0}
+ .gallery-more-button{margin-top:12px;padding:9px 16px;font-size:10px}
+}
