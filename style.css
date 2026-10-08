@@ -139,6 +139,9 @@ img{display:block;max-width:100%}
 }
 @media(max-width:800px){.hero-role{font-size:clamp(17.1px,5.6vw,21.9px)}.hero-role-second-line{display:inline-block;margin-left:.22em}}
 
+/* Dunkin’ digital menu — keep its original aspect ratio and show the full artwork */
+.dunkin-digital-menu .dunkin-menu-full{display:block;width:100%;height:auto;max-width:none;object-fit:contain}
+
 /* La Reforma case study additions */
 .reforma-redesign{padding-top:30px}
 .reforma-feature{padding:12px 0 28px}
