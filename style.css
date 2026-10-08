@@ -161,3 +161,7 @@ img{display:block;max-width:100%}
  .la-reforma-video-grid .case-video{aspect-ratio:16/9}
  .la-reforma-video-grid .case-video--symbol>span{width:42px;height:42px;font-size:16px}
 }
+
+
+/* Piaccere cover is a panoramic brand banner; preserve its full composition. */
+.piaccere .case-cover{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain}
