@@ -177,3 +177,9 @@ img{display:block;max-width:100%}
  .hero-role-second-line{display:inline-block;margin-left:0}
  .gallery-more-button{margin-top:12px;padding:9px 16px;font-size:10px}
 }
+
+
+.noroo-business{padding-top:20px;margin-top:20px;border-top:1px solid rgba(25,25,25,.35)}
+.noroo-business-title{font-family:var(--display);font-size:22px;line-height:1;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 8px}
+.noroo-business .gallery-hint{margin-bottom:11px}
+@media(max-width:800px){.noroo-business{padding-top:14px;margin-top:14px}.noroo-business-title{font-size:18px;margin-bottom:7px}}
