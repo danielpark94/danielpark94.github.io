@@ -119,7 +119,7 @@ const workViewButtons = document.querySelectorAll('[data-work-view]');
 workViewButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const view = button.dataset.workView;
-    const panelId = { clients: 'by-client', skills: 'by-skill', work: 'by-work' }[view];
+    const panelId = view === 'clients' ? 'by-client' : 'by-skill';
 
     workViewButtons.forEach((option) => {
       const isActive = option === button;
@@ -173,7 +173,3 @@ lightboxImage?.addEventListener('touchend', (event) => {
   showLightboxItem(lightboxIndex + (dx < 0 ? 1 : -1));
 }, { passive: true });
 
-
-if (window.location.hash === '#by-work') {
-  document.querySelector('[data-work-view="work"]')?.click();
-}
