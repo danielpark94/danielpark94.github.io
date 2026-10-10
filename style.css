@@ -211,6 +211,15 @@ img{display:block;max-width:100%}
 .bento-grid--keopi .case-image:nth-child(4n){grid-column:span 1;grid-row:span 8;background:#0b554f}
 .client-full-size{display:flex;flex-direction:column;gap:14px}
 .client-full-size .collection-full-image,.client-full-size .collection-full-video{margin:0}
+.illustration-client-group{width:min(calc(100% - 9%),var(--page));margin:0 auto;padding:24px 0;border-bottom:1px solid rgba(25,25,25,.4)}
+.illustration-client-title{font-family:var(--display);font-size:clamp(25px,3vw,42px);line-height:1;text-transform:uppercase;letter-spacing:-.015em;margin:0 0 6px}
+.illustration-client-title a{color:inherit}
+.illustration-client-note{font:500 12px/1.3 var(--body);margin:0 0 8px}
+.illustration-album.case-gallery{width:100%;padding:18px 0 22px;border-bottom:0}
+.illustration-album>.collection-project-title{font-size:clamp(20px,2vw,28px)!important}
+.illustration-full-video{display:block;width:100%;height:auto;max-height:88vh;background:#111;object-fit:contain}
+.case-image-grid>.illustration-grid-video{display:block;width:100%;height:100%;min-width:0;aspect-ratio:1 / 1;object-fit:cover;background:#111}
+.illustration-full-image{width:100%;max-width:none}
 @media(max-width:800px){
  .work-grid--collections{margin-top:24px;padding-top:22px}
  .bento-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(82px,24vw,150px);gap:7px}
@@ -224,4 +233,13 @@ img{display:block;max-width:100%}
  .bento-grid--keopi .case-image:nth-child(4n + 3){grid-column:span 1;grid-row:span 5}
  .bento-grid--keopi .case-image:nth-child(4n){grid-column:span 1;grid-row:span 7}
  .collection-full-image,.collection-full-video{margin-bottom:12px}
+ .illustration-client-group{width:calc(100% - 32px);padding:17px 0}
+ .illustration-client-title{font-size:23px;margin-bottom:5px}
+ .illustration-client-note{font-size:10px}
+ .illustration-album.case-gallery{padding:12px 0 16px}
+ .illustration-full-video{max-height:none}
 }
+
+/* Illustration collection: full artwork stays uncropped; selected client pieces link back to their case studies. */
+.illustration-full-image{display:block;width:100%;height:auto;max-width:none;aspect-ratio:auto;border-radius:0;overflow:visible;background:transparent;cursor:zoom-in}
+.illustration-full-image img{display:block;width:100%;height:auto;object-fit:contain}

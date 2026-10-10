@@ -72,22 +72,26 @@ document.querySelectorAll('[data-video]').forEach((button) => {
   });
 });
 
-const campaignVideo = document.querySelector('[data-scroll-autoplay]');
+const campaignVideos = document.querySelectorAll('[data-scroll-autoplay]');
 const campaignSoundToggle = document.querySelector('.campaign-sound-toggle');
 
-if (campaignVideo && 'IntersectionObserver' in window) {
-  const campaignVideoObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) {
-      campaignVideo.muted = true;
-      campaignVideo.play().catch(() => {});
-    } else {
-      campaignVideo.pause();
-    }
+if ('IntersectionObserver' in window) {
+  const campaignVideoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.muted = true;
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
   }, { threshold: 0.55 });
-  campaignVideoObserver.observe(campaignVideo);
+  campaignVideos.forEach((video) => campaignVideoObserver.observe(video));
 }
 
 campaignSoundToggle?.addEventListener('click', () => {
+  const campaignVideo = document.querySelector('[data-scroll-autoplay]');
   if (!campaignVideo) return;
   campaignVideo.muted = !campaignVideo.muted;
   const soundEnabled = !campaignVideo.muted;
@@ -133,6 +137,11 @@ workViewButtons.forEach((button) => {
   });
 });
 
+// Keep the selected Work toggle when returning from one of its category pages.
+if (window.location.hash === '#by-skill') {
+  document.querySelector('[data-work-view="skills"]')?.click();
+}
+
 
 // Keep long image sections compact until the visitor asks to see the rest.
 document.querySelectorAll('.case-gallery .case-image-grid').forEach((grid) => {
@@ -172,4 +181,3 @@ lightboxImage?.addEventListener('touchend', (event) => {
   if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy)) return;
   showLightboxItem(lightboxIndex + (dx < 0 ? 1 : -1));
 }, { passive: true });
-
