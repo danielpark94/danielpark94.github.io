@@ -24,7 +24,7 @@
         <div class="about-copy">
           <h1 id="about-name">Daniel<br class="about-name-break">Park</h1>
           <p class="about-role">Art Director &amp; Graphic Designer</p>
-          <p class="about-location">Ecuadorian based in<br>Guayaquil — Ecuador</p>
+          <p class="about-location">Based in<br>Guayaquil, Ecuador</p>
         </div>
         <img class="about-portrait" src="assets/about/hero.png" alt="Portrait of Daniel Park">
       </div>
@@ -63,13 +63,24 @@
     <section class="about-testimonials" aria-labelledby="testimonials-title">
       <div class="section-wrap"><h2 id="testimonials-title">Comments from Clients</h2></div>
       <div class="testimonial-track" aria-label="Swipe through client recommendations" tabindex="0">
+        <article class="testimonial-card"><h3>Jason Rouslin</h3><p class="testimonial-role">Authorized Representative at Gambly Inc.</p><blockquote>“Daniel is dependable, versatile, hardworking, and adaptable. He was a valued member of our team, and I would gladly work with him again.”</blockquote></article>
         <article class="testimonial-card"><h3>Vanessa Lozano</h3><p class="testimonial-role">Head of Marketing at Chiveria</p><blockquote>“Daniel is proactive, collaborative, and always brings thoughtful ideas to the table. I highly recommend him.”</blockquote></article>
         <article class="testimonial-card"><h3>Verónica Solines</h3><p class="testimonial-role">Head of Marketing at La Reforma</p><blockquote>“Daniel turns brand needs into clear, practical, and visually strong solutions. He is adaptable, detail-oriented, and a trusted creative partner.”</blockquote></article>
         <article class="testimonial-card"><h3>Isabella Haro</h3><p class="testimonial-role">Selection Assistant at Quantumbit</p><blockquote>“Daniel is dedicated, responsible, and highly capable. His positive attitude and teamwork made him a valued colleague.”</blockquote></article>
         <article class="testimonial-card"><h3>María Fernanda Campos</h3><p class="testimonial-role">Coordinator at Namú Estudio Creativo</p><blockquote>“Daniel performed his duties as Art Director exceptionally during his time at Namú Estudio Creativo.”</blockquote></article>
       </div>
       <div class="testimonial-dots" aria-label="Choose a recommendation"></div>
-      <a class="recommendation-link" href="mailto:work.danielpark@gmail.com?subject=Recommendation%20letters%20access"><span class="recommendation-icon" aria-hidden="true"><i></i></span><span>Recommendation Letters<small>Request private access</small></span></a>
+      <button class="recommendation-link" type="button" id="letters-open"><span class="recommendation-icon" aria-hidden="true"><i></i></span><span>Recommendation Letters<small>Password-protected download</small></span></button>
+      <dialog class="letters-dialog" id="letters-dialog" aria-labelledby="letters-dialog-title">
+        <form id="letters-form">
+          <button class="letters-dialog-close" type="button" aria-label="Close">×</button>
+          <h2 id="letters-dialog-title">Recommendation Letters</h2>
+          <label for="letters-password">Enter password to download the letters</label>
+          <input id="letters-password" name="password" type="password" required autocomplete="off" aria-describedby="letters-error">
+          <p id="letters-error" class="letters-error" aria-live="polite"></p>
+          <button class="letters-submit" type="submit">Unlock &amp; Download</button>
+        </form>
+      </dialog>
     </section>
   </main>
   <footer class="site-footer" id="contact">

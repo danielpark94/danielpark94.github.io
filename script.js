@@ -182,6 +182,59 @@ if (testimonialTrack) {
   updateCenteredCard();
 }
 
+// Recommendation documents are stored as an authenticated encrypted payload.
+// The password is never embedded in the public HTML or JavaScript.
+const lettersDialog = document.querySelector('#letters-dialog');
+const lettersForm = document.querySelector('#letters-form');
+const lettersPassword = document.querySelector('#letters-password');
+const lettersError = document.querySelector('#letters-error');
+const lettersSubmit = document.querySelector('.letters-submit');
+document.querySelector('#letters-open')?.addEventListener('click', () => {
+  lettersError.textContent = '';
+  lettersPassword.value = '';
+  lettersDialog?.showModal();
+  lettersPassword?.focus();
+});
+lettersDialog?.querySelector('.letters-dialog-close')?.addEventListener('click', () => lettersDialog.close());
+lettersDialog?.addEventListener('click', (event) => {
+  if (event.target === lettersDialog) lettersDialog.close();
+});
+lettersForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  lettersError.textContent = '';
+  lettersSubmit.disabled = true;
+  lettersSubmit.textContent = 'Unlocking…';
+  try {
+    const response = await fetch('assets/about/recommendations.enc', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Could not load the encrypted letters.');
+    const envelope = new Uint8Array(await response.arrayBuffer());
+    const magic = new TextDecoder().decode(envelope.slice(0, 8));
+    if (magic !== 'DPLETTR1') throw new Error('Invalid encrypted archive.');
+    const salt = envelope.slice(8, 24);
+    const iv = envelope.slice(24, 36);
+    const tag = envelope.slice(36, 52);
+    const ciphertext = envelope.slice(52);
+    const encryptedWithTag = new Uint8Array(ciphertext.length + tag.length);
+    encryptedWithTag.set(ciphertext);
+    encryptedWithTag.set(tag, ciphertext.length);
+    const material = await crypto.subtle.importKey('raw', new TextEncoder().encode(lettersPassword.value), 'PBKDF2', false, ['deriveKey']);
+    const key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: 1200000, hash: 'SHA-256' }, material, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+    const archive = await crypto.subtle.decrypt({ name: 'AES-GCM', iv, tagLength: 128 }, key, encryptedWithTag);
+    const url = URL.createObjectURL(new Blob([archive], { type: 'application/zip' }));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Daniel-Park-Recommendation-Letters.zip';
+    link.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 60000);
+    lettersDialog.close();
+  } catch (error) {
+    lettersError.textContent = error?.name === 'OperationError' ? 'Incorrect password. Please try again.' : 'Unable to unlock the letters right now. Please try again.';
+  } finally {
+    lettersSubmit.disabled = false;
+    lettersSubmit.textContent = 'Unlock & Download';
+  }
+});
+
 
 // Keep long image sections compact until the visitor asks to see the rest.
 document.querySelectorAll('.case-gallery .case-image-grid').forEach((grid) => {
