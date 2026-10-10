@@ -243,3 +243,8 @@ img{display:block;max-width:100%}
 /* Illustration collection: full artwork stays uncropped; selected client pieces link back to their case studies. */
 .illustration-full-image{display:block;width:100%;height:auto;max-width:none;aspect-ratio:auto;border-radius:0;overflow:visible;background:transparent;cursor:zoom-in}
 .illustration-full-image img{display:block;width:100%;height:auto;object-fit:contain}
+
+@media(max-width:800px){
+ .footer-message h2{white-space:normal}
+ .footer-message h2 br{display:block}
+}

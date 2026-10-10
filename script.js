@@ -72,8 +72,14 @@ document.querySelectorAll('[data-video]').forEach((button) => {
   });
 });
 
-const campaignVideos = document.querySelectorAll('[data-scroll-autoplay]');
+const scrollVideos = document.querySelectorAll('video:not(.lightbox-video)');
 const campaignSoundToggle = document.querySelector('.campaign-sound-toggle');
+
+scrollVideos.forEach((video) => {
+  video.muted = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+});
 
 if ('IntersectionObserver' in window) {
   const campaignVideoObserver = new IntersectionObserver((entries) => {
@@ -86,8 +92,10 @@ if ('IntersectionObserver' in window) {
         video.pause();
       }
     });
-  }, { threshold: 0.55 });
-  campaignVideos.forEach((video) => campaignVideoObserver.observe(video));
+  }, { threshold: 0.15 });
+  scrollVideos.forEach((video) => campaignVideoObserver.observe(video));
+} else {
+  scrollVideos.forEach((video) => video.play().catch(() => {}));
 }
 
 campaignSoundToggle?.addEventListener('click', () => {
