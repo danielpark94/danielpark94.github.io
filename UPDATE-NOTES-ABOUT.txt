@@ -1,0 +1,5 @@
+ABOUT PAGE UPDATE
+
+Copy the files in this archive over the matching files at the root of the existing portfolio repository. Keep the existing assets folder. The About page uses the supplied portrait, client-logo strip, and app-logo PNGs under assets/about/.
+
+The recommendation documents from the source archive are intentionally excluded from this public-site update. GitHub Pages is static hosting; a password prompt implemented in the page would not protect the files. The button requests access by email until the letters can be hosted in a service with real access control.

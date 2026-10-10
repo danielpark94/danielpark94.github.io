@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191919">
+  <meta name="description" content="About Daniel Park, Ecuadorian art director and graphic designer.">
+  <title>About — Daniel Park</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="about-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Daniel Park Hero Studio home"><img src="assets/logo/daniel-park-logo.svg" alt="Daniel Park Hero Studio"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span><b>Menu</b></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="work.html">Work</a><a class="is-current" href="about.html" aria-current="page">About</a><a href="index.html#contact">Contact</a></nav>
+  </header>
+  <main>
+    <section class="about-intro" aria-labelledby="about-name">
+      <div class="about-hero section-wrap">
+        <div class="about-copy">
+          <h1 id="about-name">Daniel<br class="about-name-break">Park</h1>
+          <p class="about-role">Art Director &amp; Graphic Designer</p>
+          <p class="about-location">Ecuadorian based in<br>Guayaquil — Ecuador</p>
+        </div>
+        <img class="about-portrait" src="assets/about/hero.png" alt="Portrait of Daniel Park">
+      </div>
+      <div class="about-bio section-wrap">
+        <h2>About Me</h2>
+        <p>Art director and graphic designer who turns ideas into clear, memorable visual stories. My work spans brand identity, campaigns, packaging, digital media, and UI design. I bring creative thinking, adaptability, and a hands-on approach to every project—from the first concept to the final details.</p>
+      </div>
+    </section>
+
+    <section class="about-toolkit" aria-labelledby="toolkit-title">
+      <div class="section-wrap">
+        <h2 id="toolkit-title">The Toolkit</h2>
+        <ul class="toolkit-list" aria-label="Creative software">
+          <li><img src="assets/about/tools/01.png" alt="Adobe Illustrator" title="Adobe Illustrator"></li>
+          <li><img src="assets/about/tools/02.png" alt="Adobe Photoshop" title="Adobe Photoshop"></li>
+          <li><img src="assets/about/tools/03.png" alt="Adobe Lightroom" title="Adobe Lightroom"></li>
+          <li><img src="assets/about/tools/04.png" alt="Adobe After Effects" title="Adobe After Effects"></li>
+          <li><img src="assets/about/tools/05.png" alt="Adobe Premiere Pro" title="Adobe Premiere Pro"></li>
+          <li><img src="assets/about/tools/06.png" alt="Adobe Firefly" title="Adobe Firefly"></li>
+          <li><img src="assets/about/tools/07.png" alt="Creative application logo"></li>
+          <li><img src="assets/about/tools/08.png" alt="Creative application logo"></li>
+          <li><img src="assets/about/tools/09.png" alt="ChatGPT" title="ChatGPT"></li>
+          <li><img src="assets/about/tools/10.png" alt="Gemini" title="Gemini"></li>
+        </ul>
+        <div class="about-divider"></div>
+        <h2 id="clients-title">The Clients</h2>
+      </div>
+      <div class="client-marquee" aria-label="Selected clients">
+        <div class="client-marquee-track">
+          <div class="client-marquee-group"><img src="assets/about/clients/01.png" alt="Dunkin’, Gambly, Blanchy, Chiveria, Facundo, Presidente, Aromas y Recuerdos, K-School, CryptoTravel, Gorkysán, Waffles &amp; Subs, Marina, Sunbed Sunbar, The Place, Witch Please, Piaccere, Arianna Guillén, Gold Orange, Noroo, and Marfecsa"></div>
+          <div class="client-marquee-group" aria-hidden="true"><img src="assets/about/clients/01.png" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-testimonials" aria-labelledby="testimonials-title">
+      <div class="section-wrap"><h2 id="testimonials-title">Comments from Clients</h2></div>
+      <div class="testimonial-track" aria-label="Swipe through client recommendations" tabindex="0">
+        <article class="testimonial-card"><h3>Vanessa Lozano</h3><p class="testimonial-role">Head of Marketing at Chiveria</p><blockquote>“Daniel is proactive, collaborative, and always brings thoughtful ideas to the table. I highly recommend him.”</blockquote></article>
+        <article class="testimonial-card"><h3>Verónica Solines</h3><p class="testimonial-role">Head of Marketing at La Reforma</p><blockquote>“Daniel turns brand needs into clear, practical, and visually strong solutions. He is adaptable, detail-oriented, and a trusted creative partner.”</blockquote></article>
+        <article class="testimonial-card"><h3>Isabella Haro</h3><p class="testimonial-role">Selection Assistant at Quantumbit</p><blockquote>“Daniel is dedicated, responsible, and highly capable. His positive attitude and teamwork made him a valued colleague.”</blockquote></article>
+        <article class="testimonial-card"><h3>María Fernanda Campos</h3><p class="testimonial-role">Coordinator at Namú Estudio Creativo</p><blockquote>“Daniel performed his duties as Art Director exceptionally during his time at Namú Estudio Creativo.”</blockquote></article>
+      </div>
+      <div class="testimonial-dots" aria-label="Choose a recommendation"></div>
+      <a class="recommendation-link" href="mailto:work.danielpark@gmail.com?subject=Recommendation%20letters%20access"><span class="recommendation-icon" aria-hidden="true"><i></i></span><span>Recommendation Letters<small>Request private access</small></span></a>
+    </section>
+  </main>
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner section-wrap">
+      <div class="footer-message"><h2>Let’s Work<br>Together.</h2><p class="footer-script">Have a project in mind?</p><p class="footer-tagline">Let’s make something worth looking at.</p></div>
+      <div class="footer-contact"><a class="email-link" href="mailto:work.danielpark@gmail.com"><img src="assets/icons/mail.svg" alt=""><span>work.danielpark@gmail.com</span></a><div class="social-links" aria-label="Social links"><a href="https://www.behance.net/danielpark94" target="_blank" rel="noopener noreferrer" aria-label="Behance"><img src="assets/icons/behance.svg" alt=""></a><a href="https://linkedin.com/in/daniel-s-park-b25a4086" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt=""></a><a href="https://instagram.com/danielpark94" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a></div><p class="copyright">2026 Daniel Park&nbsp; | &nbsp;Guayaquil, Ecuador</p></div>
+    </div>
+  </footer>
+</body>
+</html>

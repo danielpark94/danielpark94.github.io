@@ -152,6 +152,36 @@ if (window.location.hash === '#by-skill') {
   document.querySelector('[data-work-view="skills"]')?.click();
 }
 
+// Swipeable About recommendations; the centered card gets the visual emphasis.
+const testimonialTrack = document.querySelector('.testimonial-track');
+if (testimonialTrack) {
+  const testimonialCards = [...testimonialTrack.querySelectorAll('.testimonial-card')];
+  const testimonialDots = document.querySelector('.testimonial-dots');
+  const dots = testimonialCards.map((card, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Show recommendation ${index + 1}`);
+    dot.addEventListener('click', () => card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' }));
+    testimonialDots?.append(dot);
+    return dot;
+  });
+  const updateCenteredCard = () => {
+    const trackCenter = testimonialTrack.getBoundingClientRect().left + testimonialTrack.clientWidth / 2;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+    testimonialCards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const distance = Math.abs(rect.left + rect.width / 2 - trackCenter);
+      if (distance < closestDistance) { closestDistance = distance; closestIndex = index; }
+    });
+    testimonialCards.forEach((card, index) => card.classList.toggle('is-centered', index === closestIndex));
+    dots.forEach((dot, index) => dot.setAttribute('aria-current', String(index === closestIndex)));
+  };
+  testimonialTrack.addEventListener('scroll', updateCenteredCard, { passive: true });
+  window.addEventListener('resize', updateCenteredCard);
+  updateCenteredCard();
+}
+
 
 // Keep long image sections compact until the visitor asks to see the rest.
 document.querySelectorAll('.case-gallery .case-image-grid').forEach((grid) => {
