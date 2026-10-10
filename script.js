@@ -45,7 +45,9 @@ const showLightboxItem = (index) => {
 
 document.querySelectorAll('[data-lightbox]').forEach((button) => {
   button.addEventListener('click', () => {
-    const album = button.closest('.case-gallery');
+    // Keep navigation within the smallest meaningful album, including nested
+    // secondary-business galleries and single-work illustration groups.
+    const album = button.closest('[data-lightbox-group], .noroo-business, .case-gallery, .illustration-client-group, .bento-grid');
     lightboxItems = [...(album?.querySelectorAll('[data-lightbox]') || [button])];
     showLightboxItem(lightboxItems.indexOf(button));
     if (!mediaLightbox) return;
