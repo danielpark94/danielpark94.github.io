@@ -97,10 +97,7 @@ img{display:block;max-width:100%}
 .case-image{display:block;min-width:0;width:100%;aspect-ratio:1 / 1;padding:0;border:0;background:#d5d5d5;border-radius:3px;overflow:hidden;cursor:zoom-in}
 .case-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .2s,filter .2s}
 .case-image:hover img{transform:scale(1.025);filter:brightness(1.06)}
-.case-video{position:relative;display:block;min-width:0;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:5px;overflow:hidden;background:#191919;cursor:pointer}
-.case-video img{display:block;width:100%;height:100%;object-fit:cover;transition:filter .2s,transform .2s}
-.case-video:hover img{filter:brightness(.78);transform:scale(1.025)}
-.case-video>span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:42px;height:42px;display:grid;place-items:center;padding-left:3px;border-radius:50%;background:var(--yellow);color:var(--black);font-size:16px;opacity:.94}
+.case-video{display:block;min-width:0;width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:5px;overflow:hidden;background:#191919;object-fit:contain}
 .case-feature-image{width:min(86%,1000px);height:auto;aspect-ratio:auto;margin:0 auto}
 .case-feature-image img{height:auto;object-fit:contain}
 .chiveria-campaign{display:flex;flex-direction:column;gap:24px}
@@ -135,7 +132,6 @@ img{display:block;max-width:100%}
  .case-gallery{padding:18px 0 21px}.gallery-hint{font-size:8px;margin-bottom:8px}
  .case-image-grid,.case-video-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
  .case-video{aspect-ratio:1 / 1;border-radius:3px}
- .case-video>span{width:30px;height:30px;font-size:12px}
  .case-eyebrow{font-size:9px;margin-bottom:20px}.case-gallery>.case-subheading{font-size:18px;margin-bottom:9px}.case-gallery>h2.case-secondary-heading{font-size:18px;margin-bottom:9px}
  .case-feature-image{width:100%}.case-feature-image img{height:auto;aspect-ratio:auto}
  .chiveria-campaign{gap:15px}.campaign-guide{width:100%}.campaign-video{max-height:none}
@@ -211,7 +207,6 @@ img{display:block;max-width:100%}
 .reforma-feature p{max-width:900px;font-family:var(--body);font-size:15px;font-weight:400;line-height:1.45;margin:0 0 20px}
 .reforma-feature img{display:block;width:100%;height:auto;max-width:1920px;margin-inline:auto}
 .la-reforma-video-grid .case-video{aspect-ratio:16/9;background:#191919}
-.la-reforma-video-grid .case-video--symbol>span{width:54px;height:54px;font-size:20px}
 @media(max-width:800px){
  .reforma-redesign{padding-top:20px}
  .reforma-feature{padding:8px 0 20px}
@@ -220,7 +215,6 @@ img{display:block;max-width:100%}
  .reforma-feature p{font-size:12px;line-height:1.4;margin-bottom:14px}
  .la-reforma-video-grid{grid-template-columns:1fr;gap:10px}
  .la-reforma-video-grid .case-video{aspect-ratio:16/9}
- .la-reforma-video-grid .case-video--symbol>span{width:42px;height:42px;font-size:16px}
 }
 
 

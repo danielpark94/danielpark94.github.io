@@ -1,0 +1,5 @@
+OPEN GRAPH SHARE PREVIEW UPDATE
+
+The supplied 1200 × 630 PNG is saved at assets/og-preview.png. Open Graph and Twitter large-image metadata are included on every portfolio page, using the page title and description and the corresponding canonical share URL.
+
+Replace the HTML pages and add assets/og-preview.png in the website repository. This package also carries forward the recent video autoplay update.

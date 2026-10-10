@@ -55,25 +55,6 @@ document.querySelectorAll('[data-lightbox]').forEach((button) => {
   });
 });
 
-document.querySelectorAll('[data-video]').forEach((button) => {
-  button.addEventListener('click', () => {
-    if (!mediaLightbox || !lightboxVideo || !lightboxImage) return;
-    lightboxImage.hidden = true;
-    lightboxPrev.hidden = true;
-    lightboxNext.hidden = true;
-    lightboxItems = [];
-    lightboxVideo.hidden = false;
-    lightboxVideo.src = button.dataset.video;
-    lightboxVideo.loop = button.dataset.videoLoop === 'true';
-    const videoPoster = button.querySelector('img')?.src;
-    if (videoPoster) lightboxVideo.poster = videoPoster;
-    else lightboxVideo.removeAttribute('poster');
-    mediaLightbox.showModal();
-    lightboxVideo.load();
-    lightboxVideo.play().catch(() => {});
-  });
-});
-
 const scrollVideos = document.querySelectorAll('video:not(.lightbox-video)');
 const campaignSoundToggle = document.querySelector('.campaign-sound-toggle');
 

@@ -1,0 +1,7 @@
+VIDEO PLAYBACK UPDATE
+
+All embedded videos across client and skill pages now start automatically when they enter the viewport, begin muted, and pause when they leave view. Native video controls remain available so visitors can enable sound or pause playback.
+
+Video poster thumbnails and the custom play buttons have been removed. Existing layout ratios and full-size video sections are preserved.
+
+Replace the matching HTML pages, style.css, and script.js in the website repository. Keep the existing assets folders, which contain the video files.
