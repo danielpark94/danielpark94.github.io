@@ -30,7 +30,7 @@
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Daniel Park Hero Studio home"><img src="assets/logo/daniel-park-logo.svg" alt="Daniel Park Hero Studio"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span><b>Menu</b></button>
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="work.html">Work</a><a href="about.html">About</a><a class="is-current" href="contact.html" aria-current="page">Contact</a></nav>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="work.html">Work</a><a href="about.html">About</a><a class="is-current" href="contact.html" aria-current="page">Contact</a></nav><div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="es" aria-pressed="false">ES</button></div>
   </header>
   <main class="contact-main">
     <section class="contact-hero section-wrap" aria-labelledby="contact-title">
@@ -41,7 +41,7 @@
           <div class="contact-fields">
             <label>First and last name<input name="Name" type="text" autocomplete="name" required></label>
             <label>Role or company<input name="Role or company" type="text" autocomplete="organization-title"></label>
-            <label>Reason for reaching out<select name="Reason" required><option value="" disabled selected>Select a reason</option><option>Project inquiry</option><option>Collaboration</option><option>Employment opportunity</option><option>Other</option></select></label>
+            <label>Reason for reaching out<select name="Reason" required><option value="" disabled selected>Select a reason</option><option value="Project inquiry">Project inquiry</option><option value="Collaboration">Collaboration</option><option value="Employment opportunity">Employment opportunity</option><option value="Other">Other</option></select></label>
             <label class="contact-message">Message<textarea name="Message" rows="5" required></textarea></label>
           </div>
           <div class="contact-actions"><button class="contact-submit" type="submit">Send a message <span aria-hidden="true">↗</span></button><a class="whatsapp-link" href="https://wa.me/593968604235" target="_blank" rel="noopener noreferrer"><span class="whatsapp-mark" aria-hidden="true">◔</span> Chat on WhatsApp</a></div>

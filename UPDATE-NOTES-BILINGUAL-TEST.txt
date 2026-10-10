@@ -1,0 +1,5 @@
+BILINGUAL PORTFOLIO TEST
+
+The site now includes an EN / ES selector in the header. English is the default; the visitor's selection is saved and stays active while navigating the portfolio. Spanish translations cover the main navigation, Home, Work, About, Contact, and the client case-study copy.
+
+Replace the included HTML pages, style.css, and script.js in the existing website repository. Keep the existing project assets. This package also carries forward the Open Graph preview image and metadata, encrypted recommendation-letter assets, and the video autoplay updates.
