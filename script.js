@@ -235,23 +235,6 @@ lettersForm?.addEventListener('submit', async (event) => {
   }
 });
 
-// GitHub Pages is static, so prepare the message in the visitor's email app.
-document.querySelector('#contact-form')?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const values = new FormData(form);
-  const body = [
-    `Name: ${values.get('Name')}`,
-    `Role or company: ${values.get('Role or company') || 'Not provided'}`,
-    `Reason: ${values.get('Reason')}`,
-    '',
-    'Message:',
-    values.get('Message'),
-  ].join('\n');
-  const subject = `Portfolio inquiry — ${values.get('Reason')}`;
-  window.location.href = `mailto:work.danielpark@gmail.com?cc=dnlprk89@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
-
 
 // Keep long image sections compact until the visitor asks to see the rest.
 document.querySelectorAll('.case-gallery .case-image-grid').forEach((grid) => {

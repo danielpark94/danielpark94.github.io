@@ -1,7 +1,5 @@
-ABOUT + CONTACT UPDATE
+ABOUT PAGE UPDATE
 
-Copy the files in this archive over the matching files at the root of the existing portfolio repository. Keep the existing assets folder. This update adds contact.html and supplied About assets under assets/about/.
-
-The contact form prepares an email to work.danielpark@gmail.com with dnlprk89@gmail.com in CC. The visitor's email app opens and the visitor sends the message from there; GitHub Pages cannot deliver form submissions by itself without a form service or backend.
+Copy the files in this archive over the matching files at the root of the existing portfolio repository. Keep the existing assets folder. The About page uses the supplied portrait, client-logo strip, and app-logo PNGs under assets/about/.
 
 The recommendation packet is stored only as an AES-256-GCM encrypted file at assets/about/recommendations.enc. It is decrypted in the browser after the visitor enters the password, then the ZIP downloads. The original PDFs and DOCX files are not included in the public site package.
