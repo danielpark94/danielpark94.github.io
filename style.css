@@ -89,6 +89,7 @@ img{display:block;max-width:100%}
 .case-gallery>h2.case-secondary-heading span{font-size:inherit}
 .gallery-hint{text-align:center;text-transform:uppercase;font-size:10px;font-weight:700;margin:0 0 11px}
 .case-image-grid,.case-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.case-video-grid>.skill-video{display:block;min-width:0;width:100%;aspect-ratio:16/9;height:auto;object-fit:contain;background:#111;border-radius:5px}
 .case-image{display:block;min-width:0;width:100%;aspect-ratio:1 / 1;padding:0;border:0;background:#d5d5d5;border-radius:3px;overflow:hidden;cursor:zoom-in}
 .case-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .2s,filter .2s}
 .case-image:hover img{transform:scale(1.025);filter:brightness(1.06)}
