@@ -1,0 +1,10 @@
+Updated portfolio files
+
+Changes in this package:
+- Digital Media remains the skill category for digital campaign work and now includes client motion graphics from Gambly, Chiveria, La Reforma, Marfecsa, Waffles&Subs, and The Place.
+- Removed the separate Social Media skill card/page. Social media artwork already assigned to Digital Media remains there.
+- Kept Animation as a separate skill category for character and personal animation projects.
+- Updated Previous/Next navigation to skip the removed page.
+- Retained the work filters, uploaded animation assets, and Cloudflare Web Analytics setup.
+
+Copy and replace the included files and assets in the repository. There is no social-media.html in this package; remove the old one if it was already copied into the repository.
