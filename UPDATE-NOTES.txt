@@ -1,9 +1,14 @@
-Portfolio quick fixes
+By Skills ordering update
 
-- Restored the intended desktop order and aligned the skill card numbers with their display order.
-- Added the Digital Media filter tag to client cards with social media work.
-- Removed the Animation tag from Self-Initiated Projects.
-- Added the Illustration tag to Chiveria.
-- Preserved the Animation and Digital Media updates from the previous package.
+The By Skills cards now use the same explicit order in desktop and mobile:
+01 Digital Media
+02 Packaging
+03 Print Media
+04 UI Design
+05 Illustration
+06 Animation
+07 Key Visuals
+08 Food Photography
+09 Graphic Tees
 
-Copy and replace the included files in your repository.
+This package preserves the previous Digital Media, Animation, and filter updates. Copy and replace the included files in your repository.
