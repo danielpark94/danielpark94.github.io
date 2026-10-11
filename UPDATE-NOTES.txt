@@ -1,0 +1,9 @@
+Portfolio quick fixes
+
+- Restored the intended desktop order and aligned the skill card numbers with their display order.
+- Added the Digital Media filter tag to client cards with social media work.
+- Removed the Animation tag from Self-Initiated Projects.
+- Added the Illustration tag to Chiveria.
+- Preserved the Animation and Digital Media updates from the previous package.
+
+Copy and replace the included files in your repository.
