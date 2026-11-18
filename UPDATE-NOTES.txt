@@ -1,14 +1,8 @@
-By Skills ordering update
+About and home intro update
 
-The By Skills cards now use the same explicit order in desktop and mobile:
-01 Digital Media
-02 Packaging
-03 Print Media
-04 UI Design
-05 Illustration
-06 Animation
-07 Key Visuals
-08 Food Photography
-09 Graphic Tees
+- Added Chema Camacho (Creative Director at Qbit) to the client comments carousel, with English and Spanish text.
+- Added Daniel's intro video between the hero and Selected Work. It matches a project thumbnail's proportion and spacing on desktop and mobile.
+- The video autoplays muted for compatibility, attempts to enable sound at 50%, and includes an on-video button to enable or mute sound at that level.
+- Preserved the latest By Skills order, digital media filter, Animation page and previous site updates.
 
-This package preserves the previous Digital Media, Animation, and filter updates. Copy and replace the included files in your repository.
+Copy and replace the included files and assets in your repository.

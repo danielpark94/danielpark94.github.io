@@ -313,3 +313,12 @@ img{display:block;max-width:100%}
 
 /* Work tag filter */
 .work-filter{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 auto 14px;color:var(--black);font-size:12px;font-weight:700;text-transform:uppercase}.work-filter select{min-width:190px;max-width:min(70vw,280px);padding:8px 34px 8px 12px;border:1px solid var(--black);border-radius:999px;background:transparent;color:var(--black);font:600 12px/1.2 var(--body);text-transform:none;cursor:pointer}.work-filter select:focus-visible{outline:3px solid var(--white);outline-offset:2px}.work-card[hidden]{display:none!important}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}.animation-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.animation-video-grid .skill-video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#111;border-radius:5px}@media(min-width:801px){.work-grid--skills .work-card[data-desktop-order="9"]{order:9}.work-grid--skills .work-card[data-desktop-order="10"]{order:10}}@media(max-width:800px){.work-filter{gap:7px;margin-bottom:11px;font-size:10px}.work-filter select{min-width:160px;font-size:11px;padding:8px 30px 8px 10px}.animation-video-grid{grid-template-columns:1fr;gap:12px}}
+
+/* Home intro video: same thumbnail proportion and gutters as project cards */
+.home-intro-section{margin:0 auto 12px}
+.home-intro-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:17px}
+.home-intro-card{position:relative;grid-column:1/-1;justify-self:center;width:calc((100% - 24px)/2);aspect-ratio:2.45;overflow:hidden;border-radius:20px;background:#111}
+.home-intro-video{display:block;width:100%;height:100%;object-fit:cover}
+.home-intro-sound-toggle{position:absolute;right:10px;bottom:10px;z-index:2;padding:8px 12px;border:1px solid var(--yellow);border-radius:999px;background:rgba(25,25,25,.88);color:var(--white);font:600 12px/1 var(--body);cursor:pointer}
+.home-intro-sound-toggle:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+@media(max-width:800px){.home-intro-section{margin-bottom:8px}.home-intro-grid{grid-template-columns:1fr}.home-intro-card{grid-column:auto;width:100%;border-radius:13px}.home-intro-sound-toggle{right:8px;bottom:8px;padding:7px 10px;font-size:11px}}
