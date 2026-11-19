@@ -1,5 +1,5 @@
-Home intro video sizing fix
+Home intro video full-frame fix
 
-- Desktop: the video spans the combined width of both thumbnail columns and matches one thumbnail row's height.
-- Mobile: the video fills the viewport edge to edge.
-- Replaces style.css only. Keep the existing video asset and other files.
+- Keeps the video full-width across both desktop thumbnail columns and edge-to-edge on mobile.
+- Removes the fixed-height crop and preserves the MP4's natural proportions so the complete frame is visible.
+- Replaces style.css only. Keep the existing home-intro.mp4 asset.
